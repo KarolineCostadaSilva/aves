@@ -3,6 +3,12 @@
 ## Introdução 🪶
 Nesse projeto, o objetivo foi classificar 524 classes de pássaros utilizando Redes Neurais Convolucionais. Escolhi o conjunto de dataset disponível no [Kaggle](https://www.kaggle.com/datasets/gpiosenka/100-bird-species), onde o conjunto de dados contém 525 espécies de aves. 84.635 imagens de treinamento, 2.625 imagens de teste (5 imagens por espécie) e 2.625 imagens de validação (5 imagens por espécie. Utilizei o [Pytorch](https://pytorch.org/) como Framework, o [Optuna](https://optuna.org/) como framework para otimização de hiperparâmetros e [MLFlow](https://mlflow.org/) como plataforma de código aberto para gerenciar o ciclo de vida de modelos de aprendizado de máquina de ponta a ponta.
 
+Resultados das métricas:
+Acurácia: 99.16%
+F1-Score: 96.47%
+Precisão: 96.93%
+Recall: 96.17%
+
 ## Motivação 🪶
 Mudanças climáticas estão ocorrendo em todo o mundo em um ritmo muito acelerado, e muitas espécies de aves correm sério risco de extinção. A identificação automática de espécies de pássaros pode ser uma ferramenta valiosa para ecologistas e biólogos na monitorização da biodiversidade e na realização de estudos ambientais. Além disso, pássaros apresentam uma enorme variedade de cores, padrões, tamanhos e formas. Isso torna a classificação multiclasse de pássaros um excelente teste para as capacidades de reconhecimento visual das redes neurais. E, por fim, eu adoro pássaros! 
 
@@ -41,7 +47,7 @@ obs.: Há uma pasta chamada Looney Birds que não são sobre pássaros, portanto
 EDA_bird_classification.ipynb
 ```
 
-4. Execute o arquivo .ipynb para executar o treinamento com seleção de hiperparâmetros. Como essa etapa é para seleção de hiperparâmetros, cada treinamento teve 1 época, mas fiz 50 trials no Optuna.
+4. Execute o arquivo .ipynb para executar o treinamento com seleção de hiperparâmetros. Como essa etapa é para seleção de hiperparâmetros, cada treinamento teve 1 época, mas fiz 100 trials no Optuna.
 
 ```
 bird_classification.ipynb
