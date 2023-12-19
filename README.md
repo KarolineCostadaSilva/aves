@@ -4,9 +4,13 @@
 Nesse projeto, o objetivo foi classificar 524 classes de pássaros utilizando Redes Neurais Convolucionais. Escolhi o conjunto de dataset disponível no [Kaggle](https://www.kaggle.com/datasets/gpiosenka/100-bird-species), onde o conjunto de dados contém 525 espécies de aves. 84.635 imagens de treinamento, 2.625 imagens de teste (5 imagens por espécie) e 2.625 imagens de validação (5 imagens por espécie. Utilizei o [Pytorch](https://pytorch.org/) como Framework, o [Optuna](https://optuna.org/) como framework para otimização de hiperparâmetros e [MLFlow](https://mlflow.org/) como plataforma de código aberto para gerenciar o ciclo de vida de modelos de aprendizado de máquina de ponta a ponta.
 
 Resultados das métricas:
+
 Acurácia: 99.16%
+
 F1-Score: 96.47%
+
 Precisão: 96.93%
+
 Recall: 96.17%
 
 ## Motivação 🪶
