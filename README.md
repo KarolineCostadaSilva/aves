@@ -7,26 +7,25 @@ Nesse projeto, o objetivo foi classificar 524 classes de pássaros utilizando Re
 
 Resultados das métricas:
 
-Acurácia: 99.16%
+Acurácia: 98.85%
 
-F1-Score: 96.47%
+F1-Score: 95.45%
 
-Precisão: 96.93%
+Precisão: 95.96%
 
-Recall: 96.17%
+Recall: 94.36%
 
 ## Motivação 🦜
 Mudanças climáticas estão ocorrendo em todo o mundo em um ritmo muito acelerado, e muitas espécies de aves correm sério risco de extinção. A identificação automática de espécies de pássaros pode ser uma ferramenta valiosa para ecologistas e biólogos na monitorização da biodiversidade e na realização de estudos ambientais. Além disso, pássaros apresentam uma enorme variedade de cores, padrões, tamanhos e formas. Isso torna a classificação multiclasse de pássaros um excelente teste para as capacidades de reconhecimento visual das redes neurais. E, por fim, eu adoro pássaros! 
 
 ## Dependências 🐧
-- Python 3.6.8
-- Pytorch 1.10.0
-- Torchvision 0.11.0
-- Optuna 3.0.6
-- OpenCV 3.4.13.47
-- Pillow 8.4.0
-- Timm 0.6.12
-- GPU GeForce RTX 4090
+- Python 3.8.18
+- Pytorch 2.1.1
+- Torchvision 0.16.1
+- Optuna 3.5.0
+- OpenCV 4.9.0.80
+- Pillow 10.0.1
+- GPU: NVIDIA GeForce RTX 4060 Laptop GPU
 
 ## Sobre o dataset (extraído na descrição do dataset no Kaggle) 🦩
 Todas as imagens são imagens coloridas de 224 x 224 x 3 em formato jpg. O conjunto de dados inclui um conjunto de treinamento, um conjunto de testes e um conjunto de validação. Cada conjunto contém 525 subdiretórios, um para cada espécie de ave. O conjunto de dados também inclui um arquivo birds.csv. Este arquivo cvs contém 5 colunas. A coluna filepaths contém o caminho relativo do arquivo para um arquivo de imagem. A coluna de rótulos contém o nome da classe da espécie de ave associada ao arquivo de imagem. A coluna do rótulo científico contém o nome científico latino da imagem. A coluna do conjunto de dados indica em qual conjunto de dados (treinamento, teste ou válido) o caminho do arquivo reside. A coluna class_id contém o valor do índice de classe associado à classe do arquivo de imagem. As imagens foram coletadas de pesquisas na internet por nome de espécie. Uma vez baixados os arquivos de imagem de uma espécie, eles foram verificados quanto à presença de imagens duplicadas ou quase duplicadas. Todas as imagens duplicadas ou quase duplicadas detectadas foram excluídas para evitar que fossem imagens comuns entre os conjuntos de treinamento, teste e validação.
@@ -58,14 +57,28 @@ EDA_bird_classification.ipynb
 ```
 bird_classification.ipynb
 ```
-   obs.: Para a escolha dos 4 algoritmos de predição, escolhi as Redes Neurais Convolucionais VGG16, ResNet50, EfficientNet e DenseNet. Todas com Aprendizado por Transferência e descongelamento da última camada.
+   obs.: Para a escolha dos 4 algoritmos de predição, escolhi as Redes Neurais Convolucionais ResNet18, ResNet50, EfficientNetV2_S e DenseNet121. Todas com Aprendizado por Transferência e congelamento da última camada.
    
    obs2.: Esse arquivo pode demorar um pouco. O seu tempo de execução ficou, em média, 4 horas.
 
 5. Execute o arquivo .ipynb para aplicar o melhor modelo com o melhor hiperparâmetro no dataset de test no MLFlow.
 
+Modelo: EfficientNetV2_S
+
+num_units: 256
+
+dropout_rate: 0.26593048478145276
+
+learning_rate: 0.0005402792841480648
+
 ```
 mlflow_bird_classification.ipynb
+```
+
+Para visualizar os resultados no MLFlow interface, vá para a pasta `./mlruns` no prompt de comando e escreva o comando abaixo.
+
+```
+mlflow ui
 ```
 
 ## Ferramentas utilizadas 🦅
