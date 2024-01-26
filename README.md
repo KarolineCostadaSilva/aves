@@ -15,6 +15,8 @@ Precisão: 95.96%
 
 Recall: 94.36%
 
+Apresentação do projeto: [Loom](https://www.loom.com/share/39fddc1a3df842bab43c80dc0e68027b?sid=f84cbf84-1f60-4f45-8ca9-169b1ddfdd53)
+
 ## Motivação 🦜
 Mudanças climáticas estão ocorrendo em todo o mundo em um ritmo muito acelerado, e muitas espécies de aves correm sério risco de extinção. A identificação automática de espécies de pássaros pode ser uma ferramenta valiosa para ecologistas e biólogos na monitorização da biodiversidade e na realização de estudos ambientais. Além disso, pássaros apresentam uma enorme variedade de cores, padrões, tamanhos e formas. Isso torna a classificação multiclasse de pássaros um excelente teste para as capacidades de reconhecimento visual das redes neurais. E, por fim, eu adoro pássaros! 
 
